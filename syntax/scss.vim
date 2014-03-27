@@ -114,7 +114,7 @@ syn region scssFunction contained matchgroup=scssFunctionName start="\<\(url(\)\
 syn match scssParameterList ".*" contained containedin=cssFunction,scssFunction contains=css.*Attr,cssColor,cssString.*,cssValue.*,scssFunction,scssVariable
 
 syn match scssVariable "$[[:alnum:]_-]\+" containedin=cssFunction,scssFunction,cssMediaType nextgroup=scssVariableAssignment skipwhite
-syn match scssVariableAssignment ":" contained nextgroup=scssVariableValue skipwhite
+syn match scssVariableAssignment ":" contained nextgroup=scssVariableValue skipwhite skipnl
 syn match scssVariableValue "[^;)]\+[;)]\@=" contained contains=css.*Attr,cssValue.*,cssColor,cssFunction,cssString.*,cssURL,scssDefault,scssFunction,scssInterpolation,scssNull,scssVariable,scssMap
 syn keyword scssNull null contained;
 
